@@ -1,0 +1,163 @@
+{
+  "_comment": "Illustrative Bedrock-style Agent invocation trace, shaped after InvokeAgent's enableTrace=true trace events and ApplyGuardrail's assessment format. This is a hand-authored example for adapter testing, not a real exported AWS log. Field-level shapes are simplified/flattened versions of the real trace/guardrail-runtime response bodies documented at: https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html and https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html",
+  "agentId": "AGENTDEMO123",
+  "agentAliasId": "ALIASDEMO1",
+  "sessionId": "sess-2026-07-05-000123",
+  "traceEvents": [
+    {
+      "eventOrder": 1,
+      "eventType": "PRE_PROCESSING",
+      "sourceNode": "User",
+      "targetNode": "PlannerAgent",
+      "inputText": "Can you summarize my last three support tickets and check if any contain my account PIN?",
+      "outputText": "Can you summarize my last three support tickets and check if any contain my account PIN?",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 145.0,
+      "usageUnits": 1,
+      "timestamp": "2026-07-05T09:12:01.101Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "NONE",
+        "assessments": [
+          {
+            "contentPolicy": {
+              "filters": [
+                {"type": "PROMPT_ATTACK", "confidence": "LOW", "filterStrength": "MEDIUM", "action": "NONE"}
+              ]
+            },
+            "sensitiveInformationPolicy": {
+              "piiEntities": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "eventOrder": 2,
+      "eventType": "ORCHESTRATION",
+      "sourceNode": "PlannerAgent",
+      "targetNode": "RetrievalAgent",
+      "inputText": "Fetch the last three support tickets for this session's authenticated user.",
+      "outputText": "Fetch the last three support tickets for this session's authenticated user.",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 98.0,
+      "usageUnits": 1,
+      "timestamp": "2026-07-05T09:12:01.402Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "NONE",
+        "assessments": [
+          {
+            "sensitiveInformationPolicy": {
+              "piiEntities": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "eventOrder": 3,
+      "eventType": "ORCHESTRATION",
+      "sourceNode": "RetrievalAgent",
+      "targetNode": "ComplianceAgent",
+      "inputText": "Fetch the last three support tickets for this session's authenticated user.",
+      "outputText": "Fetch the last three support tickets for this session's authenticated user.",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 101.0,
+      "usageUnits": 1,
+      "timestamp": "2026-07-05T09:12:01.699Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "NONE",
+        "assessments": [
+          {
+            "sensitiveInformationPolicy": {
+              "piiEntities": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "eventOrder": 4,
+      "eventType": "ACTION_GROUP_INVOCATION",
+      "sourceNode": "ComplianceAgent",
+      "targetNode": "AccountLookupTool",
+      "inputText": "account_id=acc-88213; scope=last_3_tickets",
+      "outputText": "ticket_1: 'Card ending 4471 declined'; ticket_2: 'PIN reset requested, PIN 5521 not confirmed by agent'; ticket_3: 'Shipping delay follow-up'",
+      "riskTag": "high",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 210.0,
+      "usageUnits": 2,
+      "timestamp": "2026-07-05T09:12:02.050Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "GUARDRAIL_INTERVENED",
+        "assessments": [
+          {
+            "sensitiveInformationPolicy": {
+              "piiEntities": [
+                {"type": "PIN", "match": "5521", "action": "BLOCKED"}
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "eventOrder": 5,
+      "eventType": "ACTION_GROUP_RESPONSE",
+      "sourceNode": "AccountLookupTool",
+      "targetNode": "SummarizerAgent",
+      "inputText": "ticket_1: 'Card ending 4471 declined'; ticket_2: 'PIN reset requested, PIN redacted'; ticket_3: 'Shipping delay follow-up'",
+      "outputText": "ticket_1: 'Card ending 4471 declined'; ticket_2: 'PIN reset requested, PIN redacted'; ticket_3: 'Shipping delay follow-up'",
+      "riskTag": "high",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 88.0,
+      "usageUnits": 1,
+      "timestamp": "2026-07-05T09:12:02.301Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "NONE",
+        "assessments": [
+          {
+            "sensitiveInformationPolicy": {
+              "piiEntities": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "eventOrder": 6,
+      "eventType": "POST_PROCESSING",
+      "sourceNode": "SummarizerAgent",
+      "targetNode": "FinalAnswer",
+      "inputText": "Draft final summary for the user of their three most recent support tickets.",
+      "outputText": "Here is a summary of your last three tickets: a declined card ending in 4471, a PIN reset request (PIN withheld for security), and a shipping delay follow-up.",
+      "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+      "latencyMs": 132.0,
+      "usageUnits": 1,
+      "timestamp": "2026-07-05T09:12:02.716Z",
+      "guardrailTrace": {
+        "guardrailId": "gr-demo-001",
+        "guardrailVersion": "3",
+        "action": "NONE",
+        "assessments": [
+          {
+            "contextualGroundingPolicy": {
+              "filters": [
+                {"type": "GROUNDING", "score": 0.93, "threshold": 0.75, "action": "NONE"}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

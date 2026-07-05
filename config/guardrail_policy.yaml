@@ -1,0 +1,94 @@
+# guardrail_policy.yaml
+# ----------------------
+# Config-driven safety policy for the Bedrock Guardrail Graph Optimizer.
+#
+# This file is the single source of truth for which trust boundaries are
+# protected, which risk levels may be reused/skipped, and which guardrail
+# results can never be reused. The optimizer (graph_optimizer.py) reads
+# this file instead of hardcoding these rules in Python.
+#
+# NOTE: This is a simulation policy for a Bedrock-style prototype. It does
+# not configure real Amazon Bedrock Guardrails.
+
+protected_boundaries:
+  - USER_TO_AGENT
+  - AGENT_TO_TOOL
+  - TOOL_TO_AGENT
+  - AGENT_TO_FINAL_RESPONSE
+
+optimizable_boundaries:
+  - AGENT_TO_AGENT_INTERNAL
+
+reuse_allowed_risk_levels:
+  - low
+  - medium
+
+skip_allowed_risk_levels:
+  - low
+
+human_review_risk_levels:
+  - high
+
+confidence_threshold: 0.65
+
+never_reuse_previous_results:
+  - WARN
+  - BLOCK
+
+guardrail_types:
+  - PII_CHECK
+  - PROMPT_ATTACK_CHECK
+  - TOXICITY_CHECK
+  - SENSITIVE_INFO_CHECK
+  - GROUNDING_CHECK
+
+# Cost/latency simulation model used by graph_metrics.py
+savings_model:
+  KEEP: 0.0
+  HUMAN_REVIEW_REQUIRED: 0.0
+  MOVE_TO_BOUNDARY: 0.0
+  REUSE_PREVIOUS_DECISION: 0.80
+  SKIP_REDUNDANT_WITH_AUDIT: 1.00
+
+# graph_risk_score rule weights (transparent, rule-based - not opaque ML)
+risk_score_weights:
+  high_risk_boundary: 3
+  tool_boundary: 2
+  missing_final_check: 2
+  policy_drift: 1
+  text_mutation: 1
+  warn_result: 1
+  block_result: 2
+
+# ---------------------------------------------------------------------------
+# Pricing/latency calibration sources (Part 2.6)
+# ---------------------------------------------------------------------------
+# The synthetic latency_ms / estimated_cost_usd values generated in
+# synthetic_workflows.py (_latency_and_cost) are calibrated -- not
+# invented -- against publicly documented Amazon Bedrock Guardrails
+# numbers, checked July 2026:
+#
+# - Cost: content-filter and denied-topic policies are billed at
+#   $0.15 per 1,000 text units (1 text unit <= 1,000 characters).
+#   Source: https://aws.amazon.com/bedrock/pricing/ (Amazon Bedrock
+#   Guardrails pricing section, verified current as of July 2026).
+#   Certain sensitive-information (PII) filter configurations are free or
+#   substantially cheaper than content-filter policies -- reflected by
+#   PII_CHECK / SENSITIVE_INFO_CHECK being calibrated lower than
+#   PROMPT_ATTACK_CHECK / TOXICITY_CHECK / GROUNDING_CHECK.
+#
+# - Latency: AWS documents that guardrail policies are evaluated in
+#   parallel per request, so total overhead is closer to the slowest
+#   single policy than the sum of all policies.
+#   Source: https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html
+#   Independent field measurements put a single policy evaluation in the
+#   ~100-300ms range (e.g. https://medium.com/@hirsch.elad/amazon-bedrock-guardrails-vs-performance-59688a0ca932,
+#   Jan 2026), which is what base_latency in _latency_and_cost is
+#   calibrated against. GROUNDING_CHECK (contextual grounding, which
+#   compares a full source + query + response) is calibrated toward the
+#   top of that range as the documented heaviest policy type.
+#
+# This remains a SIMULATION: these are realistic, sourced ballpark
+# constants used to make the "call reduction / latency saved / cost saved"
+# headline numbers defensible in conversation, not numbers measured
+# against a live AWS account. See README.md "Known Limitations".

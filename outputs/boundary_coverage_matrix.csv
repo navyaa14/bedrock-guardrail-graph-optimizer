@@ -1,0 +1,6 @@
+trust_boundary,original_checks,preserved_checks,coverage_percent,optimized_checks,human_review_checks
+AGENT_TO_AGENT_INTERNAL,1521,393,25.84,500,628
+AGENT_TO_FINAL_RESPONSE,466,466,100.0,0,0
+AGENT_TO_TOOL,236,236,100.0,0,0
+TOOL_TO_AGENT,236,236,100.0,0,0
+USER_TO_AGENT,569,569,100.0,0,0

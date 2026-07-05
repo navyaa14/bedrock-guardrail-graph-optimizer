@@ -1,0 +1,12 @@
+scenario,workflow_count,original_guardrail_calls,optimized_guardrail_calls,call_reduction_percent,latency_saved_percent,cost_saved_percent,boundary_coverage_percent,high_risk_preservation_percent
+code_generation,30,143,150,-4.9,-6.0,-7.2,100.0,100.0
+financial_advisory,30,263,268,-1.9,-1.64,-2.17,100.0,100.0
+healthcare_triage,30,145,154,-6.21,-7.13,-7.36,100.0,100.0
+high_risk_finance,30,193,199,-3.11,-3.74,-4.32,100.0,100.0
+linear,30,170,137,19.41,19.16,19.0,100.0,100.0
+long_chain,90,828,661,20.17,21.4,20.31,100.0,100.0
+multi_branch,60,493,403,18.26,19.19,19.84,100.0,100.0
+orphan_branch_mixed,1,5,5,0.0,14.93,15.38,100.0,100.0
+rag_customer_support,30,145,133,8.28,11.55,10.32,100.0,100.0
+repeated_handoff,60,413,374,9.44,13.46,13.2,100.0,100.0
+tool_heavy,30,230,235,-2.17,-2.78,-3.08,100.0,100.0

@@ -1,0 +1,5 @@
+-r requirements.txt
+mypy>=1.10.0
+pandas-stubs
+types-PyYAML
+pre-commit

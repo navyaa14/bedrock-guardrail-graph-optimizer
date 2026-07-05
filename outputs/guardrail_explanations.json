@@ -1,0 +1,389 @@
+[
+  {
+    "workflow_id": "wf_360",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v1 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_360 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 1271.48,
+    "cost_saved_usd": 0.001489,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_401",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v1 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_401 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 1524.16,
+    "cost_saved_usd": 0.001537,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_374",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v2 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_374 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 495.72,
+    "cost_saved_usd": 0.00065,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_016",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v1 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_016 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 492.68,
+    "cost_saved_usd": 0.000584,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_142",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v1 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_142 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 265.96,
+    "cost_saved_usd": 0.000104,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_164",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PII_CHECK / policy_v1 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_164 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same PII_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 537.34,
+    "cost_saved_usd": 0.000239,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_156",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PII_CHECK / policy_v2 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_156 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same PII_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 267.87,
+    "cost_saved_usd": 0.000104,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_086",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v1 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_086 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 536.48,
+    "cost_saved_usd": 0.00062,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_261",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "TOXICITY_CHECK / policy_v2 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_261 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same TOXICITY_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 658.66,
+    "cost_saved_usd": 0.00115,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_346",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PROMPT_ATTACK_CHECK / policy_v1 repeated 4x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_346 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same PROMPT_ATTACK_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 4 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 734.13,
+    "cost_saved_usd": 0.000884,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_011",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v2 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_011 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 711.91,
+    "cost_saved_usd": 0.000257,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_377",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PII_CHECK / policy_v1 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_377 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same PII_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 218.79,
+    "cost_saved_usd": 0.000105,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_318",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v2 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_318 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 663.75,
+    "cost_saved_usd": 0.000244,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_044",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v3 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_044 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 282.71,
+    "cost_saved_usd": 9.9e-05,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_109",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PII_CHECK / policy_v2 repeated 5x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_109 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same PII_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 5 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 590.77,
+    "cost_saved_usd": 0.00025,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_275",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PROMPT_ATTACK_CHECK / policy_v3 repeated 4x",
+    "recommended_action": "REUSE_PREVIOUS_DECISION",
+    "safety_reasoning": "Workflow wf_275 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same PROMPT_ATTACK_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because risk was medium, so the prior decision is reused with an audit trail rather than fully skipped, the optimizer recommends REUSE_PREVIOUS_DECISION for 4 downstream check(s). Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 698.76,
+    "cost_saved_usd": 0.00081,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_331",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PII_CHECK / policy_v3 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_331 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same PII_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 240.78,
+    "cost_saved_usd": 9.6e-05,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_264",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v3 repeated 3x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_264 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 3 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 904.78,
+    "cost_saved_usd": 0.0009,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_292",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PROMPT_ATTACK_CHECK / policy_v3 repeated 3x",
+    "recommended_action": "REUSE_PREVIOUS_DECISION",
+    "safety_reasoning": "Workflow wf_292 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer. The same PROMPT_ATTACK_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because risk was medium, so the prior decision is reused with an audit trail rather than fully skipped, the optimizer recommends REUSE_PREVIOUS_DECISION for 3 downstream check(s). Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 504.07,
+    "cost_saved_usd": 0.000634,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_158",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v3 repeated 3x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_158 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 3 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 796.2,
+    "cost_saved_usd": 0.000929,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_247",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v2 repeated 5x",
+    "recommended_action": "HUMAN_REVIEW_REQUIRED",
+    "safety_reasoning": "Workflow wf_247 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate involved high risk or a conflicting guardrail result, so it is never auto-optimized, the optimizer flags this path for HUMAN_REVIEW_REQUIRED. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 1038.26,
+    "cost_saved_usd": 0.0012,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_209",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "PROMPT_ATTACK_CHECK / policy_v2 repeated 2x",
+    "recommended_action": "HUMAN_REVIEW_REQUIRED",
+    "safety_reasoning": "Workflow wf_209 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same PROMPT_ATTACK_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate involved high risk or a conflicting guardrail result, so it is never auto-optimized, the optimizer flags this path for HUMAN_REVIEW_REQUIRED. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 264.98,
+    "cost_saved_usd": 0.000344,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_226",
+    "path_summary": "User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "GROUNDING_CHECK / policy_v2 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_226 contains a path User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer. The same GROUNDING_CHECK under policy policy_v2 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 527.6,
+    "cost_saved_usd": 0.00062,
+    "audit_required": true,
+    "human_review_required": true
+  },
+  {
+    "workflow_id": "wf_165",
+    "path_summary": "User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v3 repeated 2x",
+    "recommended_action": "SKIP_REDUNDANT_WITH_AUDIT",
+    "safety_reasoning": "Workflow wf_165 contains a path User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v3 was executed multiple times across internal agent handoffs. Because the duplicate checks occurred only on AGENT_TO_AGENT_INTERNAL edges, the previous result was PASS, the text hash did not change, and risk was low, the optimizer recommends SKIP_REDUNDANT_WITH_AUDIT for 2 downstream check(s) on internal handoffs. Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 254.04,
+    "cost_saved_usd": 0.0001,
+    "audit_required": true,
+    "human_review_required": false
+  },
+  {
+    "workflow_id": "wf_394",
+    "path_summary": "User -> PlannerAgent -> ComplianceAgent -> SummarizerAgent -> FinalAnswer",
+    "duplicate_guardrail_pattern": "SENSITIVE_INFO_CHECK / policy_v1 repeated 2x",
+    "recommended_action": "REUSE_PREVIOUS_DECISION",
+    "safety_reasoning": "Workflow wf_394 contains a path User -> PlannerAgent -> ComplianceAgent -> SummarizerAgent -> FinalAnswer. The same SENSITIVE_INFO_CHECK under policy policy_v1 was executed multiple times across internal agent handoffs. Because risk was medium, so the prior decision is reused with an audit trail rather than fully skipped, the optimizer recommends REUSE_PREVIOUS_DECISION for 2 downstream check(s). Checks at AGENT_TO_AGENT_INTERNAL, AGENT_TO_FINAL_RESPONSE, USER_TO_AGENT are preserved.",
+    "boundary_checks_preserved": [
+      "AGENT_TO_AGENT_INTERNAL",
+      "AGENT_TO_FINAL_RESPONSE",
+      "USER_TO_AGENT"
+    ],
+    "latency_saved_ms": 221.62,
+    "cost_saved_usd": 9e-05,
+    "audit_required": true,
+    "human_review_required": false
+  }
+]

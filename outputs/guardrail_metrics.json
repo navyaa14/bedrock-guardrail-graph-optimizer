@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "original_guardrail_calls": 3028,
+    "optimized_guardrail_calls": 2719,
+    "guardrail_call_reduction_percent": 10.2,
+    "original_total_latency_ms": 594000.68,
+    "optimized_total_latency_ms": 531306.33,
+    "latency_saved_ms": 62694.35,
+    "latency_saved_percent": 10.55,
+    "original_total_cost_usd": 0.5886,
+    "optimized_total_cost_usd": 0.5308,
+    "cost_saved_usd": 0.0578,
+    "cost_saved_percent": 9.82
+  },
+  "graph": {
+    "workflows_analyzed": 421,
+    "average_nodes_per_workflow": 6.1,
+    "average_edges_per_workflow": 5.31,
+    "average_path_length": 4.88,
+    "workflows_with_redundant_paths": 347,
+    "total_redundant_paths_detected": 1271,
+    "redundant_paths_optimized": 500,
+    "redundant_paths_blocked_by_safety": 771,
+    "graph_risk_score_average": 8.33
+  },
+  "safety": {
+    "boundary_checks_original": 1507,
+    "boundary_checks_preserved": 1507,
+    "boundary_coverage_preserved_percent": 100.0,
+    "high_risk_checks_original": 1148,
+    "high_risk_checks_preserved": 1148,
+    "high_risk_preservation_percent": 100.0,
+    "false_skip_rate_simulated": 0.0,
+    "policy_drift_blocks": 54,
+    "text_mutation_blocks": 24,
+    "warn_block_escalations": 172,
+    "human_review_count": 628,
+    "audit_required_count": 1207
+  }
+}

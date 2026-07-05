@@ -1,0 +1,422 @@
+workflow_id,request_id,node_count,edge_count,max_path_length,total_guardrail_calls,duplicate_guardrail_groups,redundant_internal_checks,protected_boundary_count,boundary_guardrail_coverage,missing_final_boundary_check,policy_drift_count,text_mutation_count,graph_risk_score,highest_redundancy_path,path_count,internal_handoff_count,high_risk_node_count,high_risk_edge_count,repeated_text_hash_count,guardrail_density,internal_redundancy_ratio
+wf_000,req_ae2378fa,6,5,3,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> ComplianceAgent -> FinalAnswer,2,3,0,0,4,1.0,1.0
+wf_001,req_304e04c4,7,6,6,6,1,0,6,1.0,False,0,0,12,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_002,req_5d6a23c9,6,6,4,12,2,8,2,0.333,False,0,0,8,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_003,req_f625fc17,6,5,5,10,2,2,4,0.8,False,0,0,20,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_004,req_8b936967,6,5,5,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_005,req_16c0be0a,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_006,req_8bde4bef,7,7,5,7,1,1,6,0.857,False,0,0,26,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_007,req_46dcb3df,5,4,4,4,1,0,4,1.0,False,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_008,req_f9162e3b,4,3,3,3,1,1,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,0.5
+wf_009,req_4a82c30f,8,7,7,14,4,8,2,0.286,False,0,0,24,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,1.6
+wf_010,req_b961cb4d,7,6,6,6,2,4,1,0.167,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_011,req_717fefc2,8,7,7,14,2,10,2,0.286,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_012,req_49e25668,6,5,5,10,4,4,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,1.333
+wf_013,req_ebd1136e,6,6,4,6,2,3,2,0.333,False,0,1,7,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,4,1.0,0.75
+wf_014,req_94f51587,5,4,4,8,2,4,2,0.5,False,0,0,1,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_015,req_5303cbd3,7,6,6,6,2,0,6,1.0,False,0,1,31,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,4,1.0,0.0
+wf_016,req_48d8ba91,6,6,4,12,2,8,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_017,req_fd81e9c4,6,5,5,10,2,2,4,0.8,False,0,0,24,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_018,req_9f1ab89f,6,5,5,10,4,4,2,0.4,False,0,2,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,8,2.0,1.333
+wf_019,req_ee6cf94f,4,3,3,6,2,2,1,0.333,True,1,0,11,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,4,3,5,2.0,1.0
+wf_020,req_d6eb2857,7,7,5,14,2,2,6,0.857,False,0,0,9,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,13,2.0,2.0
+wf_021,req_48b41905,5,4,4,4,1,0,4,1.0,False,0,0,16,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_022,req_0f6ce01c,5,4,4,4,1,2,2,0.5,False,0,0,8,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_023,req_16d7e2fd,8,7,7,14,2,10,2,0.286,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_024,req_128e91b0,8,7,7,7,1,5,2,0.286,False,0,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_025,req_31cc1813,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_026,req_8b39c33b,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_027,req_283e6067,5,5,3,5,1,4,1,0.2,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,1.0
+wf_028,req_92eea582,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_029,req_c8a5a91b,7,6,6,12,2,0,6,1.0,False,0,0,13,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,11,2.0,0.0
+wf_030,req_45a7d52a,6,6,4,6,1,4,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_031,req_1fd8e7c9,6,5,5,5,1,1,4,0.8,False,0,0,22,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_032,req_879a48a7,6,5,5,5,2,2,2,0.4,False,0,1,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,3,1.0,0.667
+wf_033,req_22e16b3a,5,4,4,8,4,2,2,0.5,False,0,2,3,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,5,2.0,1.0
+wf_034,req_2551bb9a,6,6,4,6,1,1,5,0.833,True,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,1.0
+wf_035,req_147d65c8,5,4,4,4,1,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_036,req_0974248a,4,3,3,3,1,2,1,0.333,True,0,0,8,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,1.0
+wf_037,req_7a051fc8,7,6,6,6,1,5,1,0.167,True,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,1.0
+wf_038,req_acbd5cdd,8,7,7,14,2,10,2,0.286,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_039,req_d3bb2ad8,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_040,req_06771ac0,6,5,5,10,2,6,2,0.4,False,0,0,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_041,req_4a7c5c78,6,6,4,12,2,8,2,0.333,False,0,0,16,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_042,req_2becdb49,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_043,req_87a6ffea,7,6,6,6,1,0,6,1.0,False,0,0,30,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_044,req_f49ed832,6,6,4,12,2,8,2,0.333,False,0,0,1,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_045,req_ac861803,6,5,5,10,2,2,4,0.8,False,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_046,req_0bd840b9,5,4,4,4,2,2,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,0.667
+wf_047,req_3282c070,4,3,3,3,1,1,1,0.333,True,0,0,9,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,4,3,2,1.0,0.5
+wf_048,req_3ea502cc,7,7,5,14,2,2,6,0.857,False,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,13,2.0,2.0
+wf_049,req_6322874e,4,3,3,3,1,0,3,1.0,True,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,2,1.0,0.0
+wf_050,req_05cbaa81,5,4,4,4,1,2,2,0.5,False,0,0,8,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_051,req_594aeedd,8,7,7,7,2,4,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_052,req_7c2600a3,8,7,7,7,1,5,2,0.286,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_053,req_d50b43f7,8,7,7,14,2,10,2,0.286,False,0,0,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_054,req_4d011736,6,5,5,10,2,6,2,0.4,False,0,0,11,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_055,req_60b10e85,5,5,3,10,2,8,1,0.2,True,0,0,4,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,9,2.0,2.0
+wf_056,req_e67fa41d,5,4,4,4,1,2,2,0.5,False,0,1,1,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_057,req_676068c1,7,6,6,6,1,0,6,1.0,False,0,0,28,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_058,req_2151ca21,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_059,req_c1506fd8,5,4,4,8,2,2,3,0.75,True,0,0,19,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,7,2.0,2.0
+wf_060,req_a6ba6f5f,6,5,5,10,2,6,2,0.4,False,0,0,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_061,req_aad5d292,5,4,4,8,2,4,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_062,req_8dcdc6be,7,7,5,7,1,1,6,0.857,False,0,0,8,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,1.0
+wf_063,req_06b21266,4,3,3,3,1,0,3,1.0,True,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,2,1.0,0.0
+wf_064,req_25aea43b,5,4,4,8,4,2,2,0.5,False,0,2,15,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,6,2.0,1.0
+wf_065,req_cb531f31,8,7,7,7,1,5,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_066,req_11bb1c37,8,7,7,7,1,5,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_067,req_f7bdd384,8,7,7,7,2,4,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_068,req_40bac85c,6,5,5,10,4,4,2,0.4,False,0,2,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,7,2.0,1.333
+wf_069,req_a48921b3,6,6,4,6,1,4,2,0.333,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_070,req_fe4c26e1,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_071,req_640eec60,7,6,6,6,2,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_072,req_89f16dff,6,6,4,6,1,4,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_073,req_4e8853d1,6,5,5,5,1,0,4,0.8,False,0,0,17,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,0.0
+wf_074,req_6b342c9e,5,4,4,4,1,3,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,1.0
+wf_075,req_7ec2803b,5,4,4,8,2,4,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_076,req_bd353a8c,6,6,4,6,1,0,5,0.833,True,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,0.0
+wf_077,req_0d811f79,5,4,4,4,1,0,4,1.0,False,0,0,18,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_078,req_44ed42ef,5,4,4,8,2,4,2,0.5,False,0,0,16,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_079,req_ea3c3381,7,6,6,6,2,4,1,0.167,True,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_080,req_18cb2777,8,7,7,7,1,5,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_081,req_30b2f167,8,7,7,7,2,4,2,0.286,False,0,1,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,5,1.0,0.8
+wf_082,req_9bdfbeab,6,5,5,5,1,3,2,0.4,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_083,req_d5a547b0,6,6,4,6,1,4,2,0.333,False,0,0,12,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_084,req_48bb3cab,5,4,4,8,2,4,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_085,req_73f28046,7,6,6,6,1,0,6,1.0,False,0,0,30,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_086,req_f3da427e,6,6,4,12,2,8,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_087,req_0f259cef,6,5,5,10,2,2,4,0.8,False,0,0,27,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_088,req_c4a1fed5,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_089,req_2b251219,5,4,4,4,1,2,2,0.5,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_090,req_ded18b29,7,7,5,7,2,0,6,0.857,False,0,0,8,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,0.0
+wf_091,req_54813445,5,4,4,8,4,0,4,1.0,False,0,2,7,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,5,2.0,0.0
+wf_092,req_b5d33da7,5,4,4,4,1,2,2,0.5,False,0,0,9,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_093,req_c434e8d8,8,7,7,7,1,5,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_094,req_36cea73c,7,6,6,6,1,5,1,0.167,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,1.0
+wf_095,req_56b01cb9,8,7,7,14,2,10,2,0.286,False,0,0,15,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_096,req_ebf52aa5,6,5,5,5,1,3,2,0.4,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_097,req_56f70cab,6,6,4,6,1,4,2,0.333,False,0,0,11,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_098,req_94a1a97e,5,4,4,8,2,4,2,0.5,False,0,0,9,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_099,req_de82520f,7,6,6,6,1,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_100,req_05112bbb,6,6,4,12,2,8,2,0.333,False,0,0,13,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_101,req_c6192fc5,6,5,5,5,1,1,4,0.8,False,0,0,19,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_102,req_40b1deb1,6,5,5,10,2,6,2,0.4,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_103,req_3620bc58,5,4,4,8,2,4,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_104,req_f20afc2a,6,6,4,6,1,1,5,0.833,True,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,1.0
+wf_105,req_828cd493,5,4,4,4,2,0,4,1.0,False,0,1,5,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,2,1.0,0.0
+wf_106,req_56ebc234,5,4,4,8,4,2,2,0.5,False,0,2,12,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,5,2.0,1.0
+wf_107,req_223586b4,8,7,7,7,1,5,2,0.286,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_108,req_f1df70d1,7,6,6,6,1,5,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,1.0
+wf_109,req_b235aed9,8,7,7,14,2,10,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_110,req_166d36f4,6,5,5,10,2,6,2,0.4,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_111,req_2aa88694,6,6,4,12,2,8,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_112,req_6f386b11,5,4,4,4,2,1,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,0.5
+wf_113,req_eec89e22,7,6,6,6,2,0,6,1.0,False,0,1,14,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,4,1.0,0.0
+wf_114,req_bac8ee69,6,6,4,12,2,8,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_115,req_5c15c4dd,6,5,5,5,1,0,4,0.8,False,0,0,21,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,0.0
+wf_116,req_1de20fa6,6,5,5,5,2,2,2,0.4,False,0,1,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,3,1.0,0.667
+wf_117,req_99c527aa,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_118,req_be9554fc,7,7,5,7,1,1,6,0.857,False,0,0,26,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_119,req_a95537e9,5,4,4,4,1,0,4,1.0,False,0,0,20,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_120,req_30e23b2b,4,3,3,3,1,1,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,0.5
+wf_121,req_ebb6c205,8,7,7,14,2,10,2,0.286,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_122,req_879a9c54,7,6,6,12,4,8,1,0.167,True,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,11,2.0,1.6
+wf_123,req_5b4175c0,8,7,7,7,1,5,2,0.286,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_124,req_b8697597,6,5,5,5,2,2,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,0.667
+wf_125,req_bd448b24,6,6,4,6,1,4,2,0.333,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_126,req_1813aa95,5,4,4,8,4,2,2,0.5,False,0,0,12,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,7,2.0,1.0
+wf_127,req_02cf0773,6,5,5,10,2,0,5,1.0,True,0,0,11,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent,1,0,0,0,9,2.0,0.0
+wf_128,req_aeb0f3ae,6,6,4,6,1,4,2,0.333,False,0,0,4,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_129,req_992e5e5d,6,5,5,10,2,0,4,0.8,False,0,2,21,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,7,2.0,0.0
+wf_130,req_db61316a,5,4,4,8,4,4,1,0.25,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,7,2.0,1.333
+wf_131,req_61a4b74e,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_132,req_f7bbc590,6,6,4,12,2,2,5,0.833,True,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,11,2.0,2.0
+wf_133,req_4db1bb82,5,4,4,4,1,0,4,1.0,False,0,0,17,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_134,req_86c06b41,5,4,4,8,2,4,2,0.5,False,0,0,11,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_135,req_68b7b747,8,7,7,14,2,10,2,0.286,False,0,0,17,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_136,req_1215cad0,7,6,6,6,2,4,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_137,req_6a7b2e50,8,7,7,7,2,4,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_138,req_b64e7ddc,6,5,5,10,2,6,2,0.4,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_139,req_f464062a,5,5,3,5,2,3,1,0.2,True,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,0.75
+wf_140,req_bfe5111b,5,4,4,4,2,1,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,0.5
+wf_141,req_f439d112,7,6,6,12,2,0,6,1.0,False,0,0,34,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,11,2.0,0.0
+wf_142,req_3e165f2c,6,6,4,12,2,8,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_143,req_3ab1d93a,6,5,5,5,1,1,4,0.8,False,0,0,19,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_144,req_9f66e458,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_145,req_d936087c,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_146,req_7991baf3,7,7,5,7,2,0,6,0.857,False,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,0.0
+wf_147,req_2dffe34c,5,4,4,8,2,0,4,1.0,False,0,0,23,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,7,2.0,0.0
+wf_148,req_271e415b,5,4,4,4,2,1,2,0.5,False,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,0.5
+wf_149,req_7b48dcbe,8,7,7,7,2,4,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_150,req_0faad315,8,7,7,7,1,5,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_151,req_97ea910b,8,7,7,7,1,5,2,0.286,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_152,req_d15980d1,6,5,5,10,3,5,2,0.4,False,0,2,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,8,2.0,1.667
+wf_153,req_45e97dcb,6,6,4,12,4,6,2,0.333,False,3,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,1.5
+wf_154,req_ef6064b2,5,4,4,8,2,4,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_155,req_1c611959,7,6,6,6,1,0,6,1.0,False,0,0,11,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_156,req_24de546f,6,6,4,12,2,8,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_157,req_1b7487ba,6,5,5,5,1,1,4,0.8,False,0,0,16,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_158,req_7eef8817,6,5,5,10,2,6,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_159,req_ea1c47a8,5,4,4,4,2,1,2,0.5,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,0.5
+wf_160,req_1a87181c,7,7,5,14,2,2,6,0.857,False,0,0,12,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,13,2.0,2.0
+wf_161,req_820b3689,5,4,4,8,4,0,4,1.0,False,2,0,10,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,7,2.0,0.0
+wf_162,req_f29b7eb4,5,4,4,4,1,2,2,0.5,False,0,0,10,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_163,req_b51074b6,8,7,7,7,1,5,2,0.286,False,0,0,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_164,req_01d9739b,8,7,7,14,2,10,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_165,req_e454a8ca,8,7,7,14,4,8,2,0.286,False,4,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,1.6
+wf_166,req_57f0f41e,6,5,5,5,1,3,2,0.4,False,0,0,10,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_167,req_e7d2e380,5,5,3,5,1,4,1,0.2,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,1.0
+wf_168,req_f90bd168,5,4,4,8,2,4,2,0.5,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_169,req_9a72b443,7,6,6,6,2,0,6,1.0,False,0,0,33,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_170,req_e94d199c,6,6,4,6,1,4,2,0.333,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_171,req_c56e96a7,6,5,5,5,1,1,4,0.8,False,0,0,20,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_172,req_e120f09c,6,5,5,10,2,6,2,0.4,False,0,0,14,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_173,req_eabf86c8,5,4,4,8,2,4,2,0.5,False,0,0,11,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_174,req_a683e9e5,6,6,4,6,1,0,5,0.833,True,0,0,11,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,0.0
+wf_175,req_abacb5bd,5,4,4,4,2,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_176,req_e9c456a2,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_177,req_065e0fcd,8,7,7,14,2,10,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_178,req_cb6622b6,7,6,6,6,2,4,1,0.167,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_179,req_b28e5884,7,6,6,6,2,4,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_180,req_5a9ae61c,5,4,4,8,4,4,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,7,2.0,1.333
+wf_181,req_119f8c28,6,6,4,6,1,4,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_182,req_3821c0bf,5,4,4,8,4,2,2,0.5,False,0,2,3,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,5,2.0,1.0
+wf_183,req_c039374a,6,5,5,10,4,0,5,1.0,True,0,0,14,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent,1,0,0,0,9,2.0,0.0
+wf_184,req_0605fbe9,5,5,3,5,1,4,1,0.2,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,1.0
+wf_185,req_f972b249,5,4,4,4,1,1,3,0.75,True,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,3,1.0,1.0
+wf_186,req_b4b1bdfa,6,5,5,10,2,6,2,0.4,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_187,req_6bbd1578,4,3,3,3,1,1,1,0.333,True,0,0,5,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,4,3,2,1.0,0.5
+wf_188,req_e288775d,7,7,5,14,4,0,6,0.857,False,0,2,12,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,11,2.0,0.0
+wf_189,req_f6b4b1a8,5,4,4,4,1,0,4,1.0,False,0,0,19,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_190,req_3bbd6aa4,5,4,4,4,1,2,2,0.5,False,0,0,11,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_191,req_60b1cecc,8,7,7,7,2,4,2,0.286,False,0,1,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,5,1.0,0.8
+wf_192,req_1a73832d,8,7,7,14,2,10,2,0.286,False,0,0,12,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_193,req_3d48dd98,8,7,7,14,2,10,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_194,req_2cfc6d7d,6,5,5,10,2,6,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_195,req_1f4d5752,6,6,4,12,4,6,2,0.333,False,3,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,1.5
+wf_196,req_2cff6449,5,4,4,4,2,1,2,0.5,False,0,1,1,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,2,1.0,0.5
+wf_197,req_7fdb6b7c,7,6,6,6,1,0,6,1.0,False,0,0,14,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_198,req_c80e8298,6,6,4,6,1,4,2,0.333,False,0,0,12,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_199,req_f7e9c61c,5,4,4,4,1,1,3,0.75,True,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,3,1.0,1.0
+wf_200,req_f3b50c0f,5,4,4,4,2,2,1,0.25,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,0.667
+wf_201,req_2ce1ec2c,5,4,4,4,2,1,2,0.5,False,0,1,4,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,2,1.0,0.5
+wf_202,req_9e670053,7,7,5,7,1,1,6,0.857,False,0,0,27,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_203,req_0ba89ad7,5,4,4,4,1,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_204,req_887bb4ca,5,4,4,4,1,2,2,0.5,False,0,0,8,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_205,req_26e07a06,7,6,6,6,2,4,1,0.167,True,0,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_206,req_94c07bdb,8,7,7,14,2,10,2,0.286,False,0,0,12,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_207,req_180fa84a,7,6,6,6,2,4,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_208,req_f5f9c980,6,5,5,5,1,3,2,0.4,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_209,req_96a103c7,6,6,4,12,2,8,2,0.333,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_210,req_4a9948c2,5,4,4,4,1,2,2,0.5,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_211,req_5872aaba,7,6,6,6,1,0,6,1.0,False,0,0,34,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_212,req_695be065,6,6,4,6,1,4,2,0.333,False,0,0,8,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_213,req_e4961864,6,5,5,5,1,0,4,0.8,False,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,0.0
+wf_214,req_c09d0f45,6,5,5,10,4,4,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,1.333
+wf_215,req_3c11ef4f,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_216,req_2c54f852,7,7,5,14,2,2,6,0.857,False,0,0,41,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,13,2.0,2.0
+wf_217,req_27bf311f,4,3,3,3,1,0,3,1.0,True,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,2,1.0,0.0
+wf_218,req_ff608b7f,4,3,3,3,1,1,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,0.5
+wf_219,req_e43f8c88,8,7,7,7,1,5,2,0.286,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_220,req_37de02b8,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_221,req_559489e6,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_222,req_c22c3166,5,4,4,8,2,6,1,0.25,True,0,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,7,2.0,2.0
+wf_223,req_a20ff4ce,6,6,4,12,2,8,2,0.333,False,0,0,18,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_224,req_c5297cca,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_225,req_b7dba4f5,7,6,6,6,1,0,6,1.0,False,0,0,11,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_226,req_df367cb9,6,6,4,12,2,8,2,0.333,False,0,0,4,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_227,req_a053f78b,6,5,5,10,2,2,4,0.8,False,0,0,25,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_228,req_4fc81077,5,4,4,4,1,3,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,1.0
+wf_229,req_2041c480,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_230,req_91ec62fd,7,7,5,14,2,2,6,0.857,False,0,0,29,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,13,2.0,2.0
+wf_231,req_1c5850e5,4,3,3,6,2,0,3,1.0,True,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,5,2.0,0.0
+wf_232,req_b4b31732,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_233,req_ab5691fa,8,7,7,7,2,4,2,0.286,False,0,1,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,5,1.0,0.8
+wf_234,req_51476f1c,8,7,7,7,1,5,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_235,req_32d145be,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_236,req_1cc43413,6,5,5,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_237,req_5ace4ec5,6,6,4,12,2,8,2,0.333,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_238,req_8a003685,4,3,3,6,2,2,1,0.333,True,0,0,8,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent,1,2,0,0,5,2.0,1.0
+wf_239,req_26d1ee42,7,6,6,6,2,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_240,req_156f3459,5,5,3,5,2,3,1,0.2,True,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,0.75
+wf_241,req_0830a503,6,5,5,5,1,1,4,0.8,False,0,0,16,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_242,req_d5a25028,5,4,4,8,4,4,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,7,2.0,1.333
+wf_243,req_219f609d,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_244,req_5dea3abe,7,7,5,7,1,1,6,0.857,False,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,1.0
+wf_245,req_a435e2c0,5,4,4,4,1,0,4,1.0,False,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_246,req_bc0ded84,4,3,3,3,1,2,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,1.0
+wf_247,req_0558f1ae,8,7,7,14,2,10,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_248,req_2575c7c3,8,7,7,7,2,4,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_249,req_ad93e216,8,7,7,7,2,4,2,0.286,False,0,1,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,5,1.0,0.8
+wf_250,req_209e3dc8,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_251,req_49af4043,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_252,req_17f7d91d,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_253,req_61ff0bdf,7,6,6,12,2,0,6,1.0,False,0,0,18,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,11,2.0,0.0
+wf_254,req_46d8a119,6,6,4,6,1,4,2,0.333,False,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_255,req_2a28706f,5,4,4,4,1,0,3,0.75,True,0,0,15,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,3,1.0,0.0
+wf_256,req_bba96799,6,5,5,10,4,4,2,0.4,False,3,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,1.333
+wf_257,req_7a506a18,5,4,4,4,1,2,2,0.5,False,0,0,8,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_258,req_14cb87e4,6,6,4,6,1,1,5,0.833,True,0,0,10,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,1.0
+wf_259,req_c52334b8,5,4,4,4,2,0,4,1.0,False,0,0,7,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_260,req_249a6687,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_261,req_1132ab01,8,7,7,14,2,10,2,0.286,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_262,req_de5a9890,8,7,7,7,1,5,2,0.286,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_263,req_e4d649c6,8,7,7,7,2,4,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_264,req_15c313ba,6,5,5,10,2,6,2,0.4,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_265,req_929f5547,6,6,4,6,1,4,2,0.333,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_266,req_1d5f3262,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_267,req_e35b2ae8,7,6,6,6,1,0,6,1.0,False,0,0,9,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_268,req_000193f8,5,5,3,5,1,4,1,0.2,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,1.0
+wf_269,req_0ee49343,6,5,5,5,1,1,4,0.8,False,0,0,24,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_270,req_e582b508,6,5,5,10,2,6,2,0.4,False,0,0,10,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,9,2.0,2.0
+wf_271,req_c4031296,5,4,4,8,2,4,2,0.5,False,0,0,1,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_272,req_82368fc3,7,7,5,7,1,1,6,0.857,False,0,0,9,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,1.0
+wf_273,req_441a6a75,4,3,3,3,1,0,3,1.0,True,0,0,12,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,2,1.0,0.0
+wf_274,req_61140658,4,3,3,3,1,2,1,0.333,True,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,1.0
+wf_275,req_9c685504,8,7,7,14,4,8,2,0.286,False,0,2,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,11,2.0,1.6
+wf_276,req_1100a48d,8,7,7,7,1,5,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_277,req_940ccee8,7,6,6,6,1,5,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,1.0
+wf_278,req_827d314c,6,5,5,5,1,3,2,0.4,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_279,req_c5db0dfa,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_280,req_20656767,5,4,4,8,2,4,2,0.5,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_281,req_b3d6d193,7,6,6,6,1,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_282,req_ae58d0d6,6,6,4,6,1,4,2,0.333,False,0,0,8,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_283,req_e330a59a,6,5,5,10,2,2,4,0.8,False,0,0,27,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_284,req_928e0007,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_285,req_2b529799,5,4,4,4,1,2,2,0.5,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_286,req_9430110f,7,7,5,7,1,1,6,0.857,False,0,0,8,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,1.0
+wf_287,req_1b15e45a,5,4,4,4,2,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_288,req_9acec03c,5,4,4,4,1,2,2,0.5,False,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_289,req_b7a91252,8,7,7,14,4,8,2,0.286,False,0,0,5,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,1.6
+wf_290,req_6469bee3,8,7,7,7,1,5,2,0.286,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_291,req_6445acfe,8,7,7,7,1,5,2,0.286,False,0,0,11,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_292,req_1df060fc,6,5,5,10,2,6,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_293,req_880db374,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_294,req_de0c1e66,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_295,req_8474f724,7,6,6,6,1,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_296,req_970a5f45,6,6,4,6,1,4,2,0.333,False,0,0,1,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_297,req_b6b14fd5,5,4,4,4,1,1,3,0.75,True,0,0,17,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,3,1.0,1.0
+wf_298,req_98e37b57,5,4,4,4,1,3,1,0.25,True,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,1.0
+wf_299,req_49d90a12,5,4,4,4,2,1,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,0.5
+wf_300,req_d0064fa0,7,7,5,7,1,1,6,0.857,False,0,0,27,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_301,req_3a1664fd,5,4,4,4,1,0,4,1.0,False,0,0,16,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,3,1.0,0.0
+wf_302,req_c0b12eb7,4,3,3,6,2,4,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,5,2.0,2.0
+wf_303,req_b6820029,8,7,7,7,1,5,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_304,req_3c8193a9,7,6,6,12,2,10,1,0.167,True,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,11,2.0,2.0
+wf_305,req_4b957684,7,6,6,6,2,4,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,0.8
+wf_306,req_aaa64434,6,5,5,10,2,6,2,0.4,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_307,req_9ca3c773,5,5,3,5,2,3,1,0.2,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,4,1.0,0.75
+wf_308,req_37f954af,5,4,4,4,1,2,2,0.5,False,0,0,7,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_309,req_907a4c74,7,6,6,6,1,0,6,1.0,False,0,0,9,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_310,req_2434f796,6,6,4,12,2,8,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_311,req_46af25ce,6,5,5,5,1,1,4,0.8,False,0,0,16,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_312,req_c29d7659,6,5,5,5,1,3,2,0.4,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_313,req_f5539130,5,4,4,8,2,4,2,0.5,False,0,0,4,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_314,req_830a962f,7,7,5,7,1,1,6,0.857,False,0,0,9,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,0,0,6,1.0,1.0
+wf_315,req_91c10161,5,4,4,4,2,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_316,req_7bf07da6,5,4,4,4,1,2,2,0.5,False,0,0,10,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_317,req_57fb3751,8,7,7,7,1,5,2,0.286,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_318,req_04af1a19,8,7,7,14,2,10,2,0.286,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_319,req_e81a3611,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_320,req_b907fd68,6,5,5,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_321,req_fc5d4524,6,6,4,6,1,4,2,0.333,False,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_322,req_b0042a93,5,4,4,4,1,2,2,0.5,False,0,0,9,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_323,req_8b256a9d,6,5,5,10,4,0,5,1.0,True,0,0,12,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent,1,0,0,0,9,2.0,0.0
+wf_324,req_eec86b96,5,5,3,10,2,8,1,0.2,True,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent,2,4,0,0,9,2.0,2.0
+wf_325,req_6b720aa2,6,5,5,5,1,1,4,0.8,False,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_326,req_6788eb09,6,5,5,5,1,3,2,0.4,False,0,1,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_327,req_2cc67cc3,4,3,3,3,1,1,1,0.333,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,0,0,2,1.0,0.5
+wf_328,req_9f7d81ee,7,7,5,7,1,1,6,0.857,False,0,0,31,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_329,req_ce798f83,4,3,3,6,2,0,3,1.0,True,1,0,7,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,5,2.0,0.0
+wf_330,req_51576587,4,3,3,6,2,2,1,0.333,True,0,0,6,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,5,2.0,1.0
+wf_331,req_bf17b07f,8,7,7,14,4,8,2,0.286,False,4,0,10,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,1.6
+wf_332,req_3737eb6d,8,7,7,7,1,5,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_333,req_7941af22,8,7,7,7,1,5,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_334,req_5858de6e,6,5,5,5,1,3,2,0.4,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_335,req_97dd4e75,6,6,4,6,1,4,2,0.333,False,0,0,4,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_336,req_f15ca648,5,4,4,4,1,2,2,0.5,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_337,req_96cf4b5b,6,5,5,10,4,0,5,1.0,True,0,0,10,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent,1,0,0,0,9,2.0,0.0
+wf_338,req_73f58a83,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_339,req_87f6786d,6,5,5,10,2,2,4,0.8,False,0,0,25,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_340,req_6555ec6f,5,4,4,4,1,3,1,0.25,True,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,1.0
+wf_341,req_8f870fb8,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_342,req_d3ab7444,7,7,5,7,2,0,6,0.857,False,0,0,32,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,0.0
+wf_343,req_24c205d1,5,4,4,8,2,0,4,1.0,False,0,0,20,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,7,2.0,0.0
+wf_344,req_c3d1110a,5,4,4,4,2,1,2,0.5,False,0,1,8,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,2,1.0,0.5
+wf_345,req_d796afdb,8,7,7,14,2,10,2,0.286,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_346,req_5c3a9f7d,8,7,7,14,4,8,2,0.286,False,0,2,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,12,2.0,1.6
+wf_347,req_a17ac846,8,7,7,7,1,5,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_348,req_233a53c5,6,5,5,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_349,req_7e1e7788,6,6,4,6,1,4,2,0.333,False,0,0,6,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_350,req_c5f448eb,5,4,4,4,2,1,2,0.5,False,0,1,10,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,2,1.0,0.5
+wf_351,req_3eceaa85,7,6,6,12,4,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,11,2.0,0.0
+wf_352,req_bac74152,6,6,4,6,1,4,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_353,req_814ad353,5,4,4,4,1,0,3,0.75,True,0,0,15,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent,1,1,5,4,3,1.0,0.0
+wf_354,req_457dbe9a,6,5,5,5,1,3,2,0.4,False,0,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_355,req_f53c04a0,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_356,req_2257249c,7,7,5,7,1,1,6,0.857,False,0,0,30,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_357,req_28d962c7,5,4,4,8,2,0,4,1.0,False,0,0,19,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,5,4,7,2.0,0.0
+wf_358,req_de85df57,4,3,3,3,1,2,1,0.333,True,0,0,5,User -> PlannerAgent -> TriageAgent -> ComplianceAgent,1,2,4,3,2,1.0,1.0
+wf_359,req_566a455a,8,7,7,7,2,4,2,0.286,False,0,1,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,5,1.0,0.8
+wf_360,req_79e77cd2,8,7,7,14,2,10,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_361,req_12b63d4e,8,7,7,7,1,5,2,0.286,False,0,0,10,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_362,req_b1a7c50f,6,5,5,5,1,3,2,0.4,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_363,req_7faf32c5,6,6,4,6,1,4,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_364,req_9c756159,5,4,4,8,2,4,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
+wf_365,req_9caa4a4d,7,6,6,6,1,0,6,1.0,False,0,0,31,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,7,6,5,1.0,0.0
+wf_366,req_d3fa5aba,6,6,4,12,2,8,2,0.333,False,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_367,req_ac2434e9,6,5,5,10,2,2,4,0.8,False,0,0,27,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,9,2.0,2.0
+wf_368,req_0656c049,6,5,5,5,1,3,2,0.4,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_369,req_7363924b,4,3,3,3,1,2,1,0.333,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,0,0,2,1.0,1.0
+wf_370,req_01fecbc2,7,7,5,7,1,1,6,0.857,False,0,0,28,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,6,1.0,1.0
+wf_371,req_b05a11d2,4,3,3,3,1,0,3,1.0,True,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent,1,0,0,0,2,1.0,0.0
+wf_372,req_9062b60a,5,4,4,4,1,2,2,0.5,False,0,0,7,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_373,req_e1faa52f,8,7,7,7,1,5,2,0.286,False,0,1,5,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_374,req_6a331f8d,8,7,7,14,4,8,2,0.286,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,1.6
+wf_375,req_52c7bbe6,8,7,7,7,2,4,2,0.286,False,0,0,4,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,0.8
+wf_376,req_66eedbbf,6,5,5,5,1,3,2,0.4,False,0,0,9,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_377,req_4b2cd569,6,6,4,12,2,8,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_378,req_ab9aa2d4,5,4,4,8,4,2,2,0.5,False,0,2,3,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,5,2.0,1.0
+wf_379,req_a4d57c1a,7,6,6,12,4,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,11,2.0,0.0
+wf_380,req_62356756,6,6,4,12,2,8,2,0.333,False,0,0,16,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,2.0
+wf_381,req_95841e6c,6,5,5,5,1,0,4,0.8,False,0,1,20,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,3,1.0,0.0
+wf_382,req_899ca386,6,5,5,5,1,3,2,0.4,False,0,0,0,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_383,req_3c033811,4,3,3,3,1,1,1,0.333,True,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent,1,2,0,0,2,1.0,0.5
+wf_384,req_6bca6b83,6,6,4,6,1,1,5,0.833,True,0,0,16,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,0,0,5,1.0,1.0
+wf_385,req_e5202b00,5,4,4,4,1,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_386,req_875131a5,5,4,4,8,2,4,2,0.5,False,0,0,13,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_387,req_add7d501,7,6,6,6,1,5,1,0.167,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,5,1.0,1.0
+wf_388,req_bc4756ff,7,6,6,12,4,8,1,0.167,True,0,0,6,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE,1,5,0,0,11,2.0,1.6
+wf_389,req_45b944f7,8,7,7,7,1,5,2,0.286,False,0,0,10,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_390,req_c9bdd0fd,5,4,4,8,2,6,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,7,2.0,2.0
+wf_391,req_985b463d,6,6,4,6,2,3,2,0.333,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,0.75
+wf_392,req_4a9f283a,5,4,4,4,1,2,2,0.5,False,0,0,0,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_393,req_3edbb4dc,7,6,6,6,1,0,6,1.0,False,0,0,8,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent -> FinalAnswer,1,0,0,0,5,1.0,0.0
+wf_394,req_34036330,6,6,4,12,2,8,2,0.333,False,0,0,1,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,11,2.0,2.0
+wf_395,req_744ffd94,6,5,5,5,1,1,4,0.8,False,0,0,18,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_396,req_93275e21,6,5,5,10,2,6,2,0.4,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,9,2.0,2.0
+wf_397,req_950d5553,5,4,4,4,1,2,2,0.5,False,0,0,8,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,3,1.0,1.0
+wf_398,req_223e98fc,7,7,5,14,2,2,6,0.857,False,0,0,30,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent -> FinalAnswer,2,1,7,7,13,2.0,2.0
+wf_399,req_4c620540,5,4,4,8,4,0,4,1.0,False,0,0,4,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,7,2.0,0.0
+wf_400,req_890a5d72,5,4,4,8,2,4,2,0.5,False,0,0,11,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_401,req_9cc9c02d,8,7,7,14,2,10,2,0.286,False,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,13,2.0,2.0
+wf_402,req_f6dd2983,8,7,7,7,1,5,2,0.286,False,0,0,16,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_403,req_d2372c4d,8,7,7,14,2,10,2,0.286,False,0,0,13,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_404,req_c4a9159e,5,4,4,4,1,3,1,0.25,True,0,0,2,User -> PlannerAgent -> AgentA -> AgentB -> AgentC,1,3,0,0,3,1.0,1.0
+wf_405,req_e657ad4b,6,6,4,6,1,4,2,0.333,False,0,0,3,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,0,0,5,1.0,1.0
+wf_406,req_46f8458e,5,4,4,8,2,4,2,0.5,False,0,0,16,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_407,req_430ccaa0,6,5,5,10,4,0,5,1.0,True,2,0,31,User -> PlannerAgent -> SearchTool -> AnalysisAgent -> DatabaseTool -> SummarizerAgent,1,0,6,5,9,2.0,0.0
+wf_408,req_92be0e3d,6,6,4,6,1,4,2,0.333,False,0,0,10,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,5,1.0,1.0
+wf_409,req_443d235e,6,5,5,5,1,1,4,0.8,False,0,1,22,User -> PlannerAgent -> FinanceAgent -> PaymentTool -> SummarizerAgent -> FinalAnswer,1,1,6,5,4,1.0,1.0
+wf_410,req_0b8e31f5,6,5,5,5,1,3,2,0.4,False,0,0,8,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,6,5,4,1.0,1.0
+wf_411,req_5fed9503,5,4,4,4,1,2,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> ComplianceAgent -> FinalAnswer,1,2,0,0,3,1.0,1.0
+wf_412,req_89bd57c9,6,6,4,12,2,0,5,0.833,True,0,0,28,User -> PlannerAgent -> MarketDataTool -> AggregatorAgent -> ComplianceAgent,2,1,6,6,11,2.0,0.0
+wf_413,req_008b4b4e,5,4,4,4,1,0,4,1.0,False,0,0,6,User -> PlannerAgent -> CodeGenTool -> ReviewerAgent -> FinalAnswer,1,0,0,0,3,1.0,0.0
+wf_414,req_a245251c,5,4,4,8,2,4,2,0.5,False,0,0,9,User -> PlannerAgent -> TriageAgent -> ComplianceAgent -> FinalAnswer,1,2,5,4,7,2.0,2.0
+wf_415,req_94b3b653,8,7,7,7,1,5,2,0.286,False,0,0,12,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,6,1.0,1.0
+wf_416,req_101cecfe,8,7,7,14,2,10,2,0.286,False,0,0,7,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,8,7,13,2.0,2.0
+wf_417,req_ba814caf,8,7,7,7,1,5,2,0.286,False,0,0,3,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> AgentD -> AgentE -> FinalAnswer,1,5,0,0,6,1.0,1.0
+wf_418,req_833d008a,6,5,5,5,1,3,2,0.4,False,0,0,1,User -> PlannerAgent -> AgentA -> AgentB -> AgentC -> FinalAnswer,1,3,0,0,4,1.0,1.0
+wf_419,req_cf9a5027,6,6,4,12,4,6,2,0.333,False,3,0,16,User -> PlannerAgent -> RetrievalAgent -> SummarizerAgent -> FinalAnswer,2,4,6,6,11,2.0,1.5
+wf_420,req_359ff88d,5,4,4,8,2,4,2,0.5,False,0,0,2,User -> PlannerAgent -> RetrievalAgent -> AnalysisAgent -> FinalAnswer,1,2,0,0,7,2.0,2.0
